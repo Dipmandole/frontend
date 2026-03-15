@@ -622,6 +622,7 @@ const HeroSection = () => {
           style={{
             background:
                 "linear-gradient(105deg, rgba(11,31,58,0.30) 0%, rgba(11,31,58,0.15) 40%, rgba(11,31,58,0.05) 70%, rgba(11,31,58,0.01) 100%)",
+                
           }}
         />
         {/* Bottom vignette */}
