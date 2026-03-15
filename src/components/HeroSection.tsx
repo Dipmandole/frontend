@@ -649,7 +649,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-4 py-1.5 rounded-full text-xs font-semibold mb-3"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
               #1 Driver Hire Service · Pune &amp; Mumbai
             </motion.span>
             <motion.h1
@@ -667,9 +667,11 @@ const HeroSection = () => {
             transition={{ duration: 0.75, delay: 0.25 }}
             id="booking" className="order-2 lg:order-last"
           >
-            <div className="rounded-3xl p-5 sm:p-6 md:p-8
-                            bg-[#111827]/80 backdrop-blur-xl
-                            border border-[#1f2937] shadow-2xl shadow-black/40">
+            <div className="rounded-3xl p-6 md:p-8
+                bg-black/30
+                backdrop-blur-md
+                border border-white/15
+                shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
 
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 shadow-lg">
