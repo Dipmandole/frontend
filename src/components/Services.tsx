@@ -85,7 +85,7 @@ const services = [
 ];
 
 const Services = () => (
-  <section className="pt-12 pb-24 bg-[#97c0f5] relative" id="services">
+  <section className="pt-12 pb-24 bg-[#e9ebee] relative" id="services">
     {/* Decorative orbs */}
     <div className="absolute top-0 right-0 w-80 h-80 bg-[#7c3aed]/5 rounded-full blur-[100px] pointer-events-none" />
     <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#f97316]/5 rounded-full blur-[80px] pointer-events-none" />
@@ -103,7 +103,7 @@ const Services = () => (
         <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mt-3 tracking-tight">
           Driver Solutions for <span className="text-[#7c3aed]">Every Need</span>
         </h2>
-        <p className="text-muted-foreground text-orange-100 text-lg mt-4 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-gray-500 text-lg mt-4 max-w-2xl mx-auto">
           From hourly rides to long-term hires — we have the perfect driver solution for you
         </p>
       </motion.div>
@@ -116,16 +116,16 @@ const Services = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="group relative bg-[#a3bad9] rounded-2xl p-7 border border-[#1f2937] hover:border-[#7c3aed]/30 hover:shadow-card-hover transition-all duration-300 cursor-pointer hover:-translate-y-1 overflow-hidden"
+            className="group relative bg-[#f2f2f3] rounded-2xl p-7 hover:border-[#7c3aed]/30 hover:shadow-card-hover transition-all duration-300 cursor-pointer hover:-translate-y-1 overflow-hidden"
           >
             {/* Top gradient line */}
             <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
             <h3 className="font-display font-bold text-lg text-foreground mb-2">{s.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed text-orange-100">{s.desc}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed text-gray-500">{s.desc}</p>
 
             <div className="flex justify-end mt-5">
-              <ArrowRight className="w-4 h-4 text-[#393d45] group-hover:text-[#7c3aed] group-hover:translate-x-1 transition-all duration-300" />
+              <ArrowRight className="w-4 h-4 text-[#9363ba] group-hover:text-[#7c3aed] group-hover:translate-x-1 transition-all duration-300" />
             </div>
           </motion.div>
         ))}

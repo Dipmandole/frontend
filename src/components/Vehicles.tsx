@@ -121,7 +121,7 @@ const Vehicles = () => (
 
     <div className="absolute inset-0">
       <img src={sectionBgDark} alt="" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0b1f3a] via-[#0b1f3a]/90 to-[#0b1f3a]/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#f1f2f4] via-[#d0ddef]/90 to-[#cadaf0]/80" />
       <div className="absolute inset-0 opacity-[0.07]"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E\")" }}
       />
@@ -141,14 +141,14 @@ const Vehicles = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-12 md:mb-16"
       >
-        <span className="inline-flex items-center gap-2 bg-[#7c3aed]/15 border border-[#7c3aed]/25 text-[#b58dfa] px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+        <span className="inline-flex items-center gap-2 bg-[#d2bef4]/15 border border-[#7c3aed]/25 text-[#7b48d2] px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
           <Car className="w-3.5 h-3.5" /> Vehicles We Cover
         </span>
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground mt-3 tracking-tight leading-tight">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground mt-3 tracking-tight text-black leading-tight">
           We Drive{" "}
           <span className="text-[#7c3aed]">All Vehicle Types</span>
         </h2>
-        <p className="text-primary-foreground/60 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed px-4">
+        <p className="text-primary-foreground/60 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed px-4 text-gray-500">
           Whether it's a compact hatchback or a luxury SUV — our trained drivers handle them all
         </p>
       </motion.div>
@@ -217,8 +217,8 @@ const Vehicles = () => (
         className="flex flex-wrap justify-center gap-4 md:gap-8 mt-10 md:mt-14"
       >
         {trustBadges.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center gap-2 text-primary-foreground/50 text-sm font-medium">
-            <Icon className="w-4 h-4 text-[#7c3aed]" />
+          <div key={label} className="flex items-center gap-2 text-gray-500 text-primary-foreground/50 text-sm font-medium">
+            <Icon className="w-4 h-4 text-[#7450b4]" />
             {label}
           </div>
         ))}
@@ -232,7 +232,7 @@ const Vehicles = () => (
         transition={{ delay: 0.5 }}
         className="text-center mt-8 md:mt-10"
       >
-        <Button variant="heroOutline" size="lg" className="text-sm md:text-base px-6 md:px-8" asChild>
+        <Button variant="heroOutline" size="lg" className="text-sm md:text-base text-black px-6 md:px-8" asChild>
           <a href="#booking">
             Book Your Driver Now <ChevronRight className="w-4 h-4 ml-1" />
           </a>

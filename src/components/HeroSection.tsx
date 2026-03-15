@@ -606,10 +606,11 @@ const HeroSection = () => {
 
         {/* Desktop: hero photo */}
         <img
-          src={heroImage}
-          alt="Professional driver with car in Pune"
-          className="hidden md:block w-full h-full object-cover object-center brightness-125 opacity-60"
-          loading="eager"
+  src={heroImage}
+  alt="Professional driver with car in Pune"
+  className="hidden md:block w-full h-full object-cover object-center brightness-110 contrast-110 saturate-110"
+
+  loading="eager"
         />
 
         {/* Mobile: clean dark bg, no image */}
@@ -620,7 +621,7 @@ const HeroSection = () => {
           className="hidden md:block absolute inset-0"
           style={{
             background:
-              "linear-gradient(105deg, rgba(11,31,58,0.65) 0%, rgba(11,31,58,0.45) 40%, rgba(11,31,58,0.25) 70%, rgba(11,31,58,0.05) 100%)",
+                "linear-gradient(105deg, rgba(11,31,58,0.30) 0%, rgba(11,31,58,0.15) 40%, rgba(11,31,58,0.05) 70%, rgba(11,31,58,0.01) 100%)",
           }}
         />
         {/* Bottom vignette */}
@@ -628,7 +629,7 @@ const HeroSection = () => {
 
         {/* Noise */}
         <div
-          className="hidden md:block absolute inset-0 opacity-[0.02]"
+          className="hidden md:block absolute inset-0 opacity-[0.01]"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E\")" }}
         />
       </div>
@@ -929,7 +930,7 @@ const HeroSection = () => {
   <svg viewBox="0 0 1440 120" className="w-full">
     <path
       d="M0,64L80,74.7C160,85,320,107,480,106.7C640,107,800,85,960,74.7C1120,64,1280,64,1360,64L1440,64L1440,120L0,120Z"
-      fill="#629de9" stroke="none"
+      fill="#eef0f1" stroke="none"
     />
   </svg>
 </div>

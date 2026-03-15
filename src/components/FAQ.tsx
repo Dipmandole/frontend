@@ -15,7 +15,7 @@ const faqs = [
 ];
 
 const FAQ = () => (
-  <section className="py-24 relative overflow-hidden" id="faq">
+  <section className="py-24 relative overflow-hidden bg-[#e9ebee]" id="faq">
     <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/3 rounded-full blur-[100px] pointer-events-none" />
 
     <div className="relative container mx-auto px-4 lg:px-8 max-w-3xl">
