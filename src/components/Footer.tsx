@@ -107,23 +107,24 @@ import { Link } from "react-router-dom";
 import sectionBgDark from "@/assets/section-bg-dark.jpg";
 
 const Footer = () => (
-  <footer className="relative overflow-hidden bg-[#0b1f3a]" id="contact">
+  <footer className="relative overflow-hidden bg-gradient-to-b from-[#0b1f3a] to-[#081426]" id="contact">
 
     <div className="relative container mx-auto px-4 lg:px-8 py-20">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
         <div className="col-span-2 lg:col-span-1">
           <div className="flex items-center gap-2.5 mb-5">
-            <div className="w-10 h-10 rounded-xl bg-[#f97316] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1e3a8a] to-[#7c3aed] flex items-center justify-center">
               <span className="text-primary-foreground font-display font-bold text-lg">P</span>
             </div>
             <span className="font-display font-bold text-xl text-primary-foreground">PuneDriver</span>
           </div>
-          <p className="text-primary-foreground/50 text-sm leading-relaxed mb-6">
-            Professional driver hire service in Pune & Mumbai. Reliable, safe, and affordable drivers at your doorstep — anytime, anywhere.
+          <p className="text-white/60 text-sm leading-relaxed mb-6">
+            Trusted driver booking service across Pune & Mumbai. 
+Hire professional drivers for safe, comfortable, and reliable travel anytime.
           </p>
           <div className="flex gap-3">
             {["Facebook", "Instagram", "Twitter"].map((s) => (
-              <a key={s} href="#" className="w-9 h-9 rounded-lg bg-[#111827] border border-[#1f2937] flex items-center justify-center text-[#d1d5db] hover:bg-[#7c3aed]/10 hover:text-[#7c3aed] transition-all text-xs font-semibold">
+              <a key={s} href="#" className="w-9 h-9 rounded-lg bg-[#111827] border border-[#1f2937] flex items-center justify-center text-[#d1d5db] hover:bg-[#f97316]/20 hover:text-[#f97316] transition-all text-xs font-semibold">
                 {s[0]}
               </a>
             ))}
@@ -131,7 +132,7 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="font-display font-bold text-primary-foreground mb-5 text-lg">Quick Links</h4>
+          <h4 className="font-display font-bold text-white mb-5 text-lg">Quick Links</h4>
           <ul className="space-y-3 text-sm">
             {[
               { label: "Home", href: "#home" },
@@ -151,7 +152,7 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="font-display font-bold text-primary-foreground mb-5 text-lg">Services</h4>
+          <h4 className="font-display font-bold text-white mb-5 text-lg">Services</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/50">
             {[
               { label: "Hourly Driver Hire", href: "/hourly-driver" },
@@ -171,28 +172,28 @@ const Footer = () => (
         </div>
 
         <div className="col-span-2 lg:col-span-1">
-          <h4 className="font-display font-bold text-primary-foreground mb-5 text-lg">Contact Us</h4>
+          <h4 className="font-display font-bold text-white mb-5 text-lg">Contact Us</h4>
           <ul className="space-y-4 text-sm">
             <li className="flex items-center gap-3 text-primary-foreground/60">
-              <div className="w-9 h-9 rounded-lg bg-[#7c3aed]/15 flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-[#f97316]/20 flex items-center justify-center flex-shrink-0">
                 <Phone className="w-4 h-4 text-[#7c3aed]" />
               </div>
               +91 98765 43210
             </li>
             <li className="flex items-center gap-3 text-primary-foreground/60">
-              <div className="w-9 h-9 rounded-lg bg-[#7c3aed]/15 flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-[#f97316]/20 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-4 h-4 text-[#7c3aed]" />
               </div>
               info@punedriveronhire.com
             </li>
             <li className="flex items-start gap-3 text-primary-foreground/60">
-              <div className="w-9 h-9 rounded-lg bg-[#7c3aed]/15 flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-[#f97316]/20 flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-4 h-4 text-[#7c3aed]" />
               </div>
               Pune & Mumbai, Maharashtra
             </li>
             <li className="flex items-center gap-3 text-primary-foreground/60">
-              <div className="w-9 h-9 rounded-lg bg-[#7c3aed]/15 flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-[#f97316]/20 flex items-center justify-center flex-shrink-0">
                 <Clock className="w-4 h-4 text-[#7c3aed]" />
               </div>
               24/7 Available
@@ -201,7 +202,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="border-t border-[#1f2937] mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#d1d5db]">
+      <div className="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#d1d5db]">
         <p>© {new Date().getFullYear()} Pune Driver on Hire. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-[#7c3aed] transition-colors">Privacy Policy</a>

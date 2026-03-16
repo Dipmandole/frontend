@@ -279,23 +279,28 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isLight
+  ? "bg-[#0b1f3a] backdrop-blur-md shadow-md border-b border-[#1f2937]"
+  : "bg-[#0b1f3a]/70 backdrop-blur-md"
+        /*isLight
           ? "bg-[#0b1f3a]/98 backdrop-blur-md shadow-md border-b border-[#1f2937]"
           : "bg-gradient-to-b from-[#0b1f3a]/60 via-[#0b1f3a]/30 to-transparent border-transparent"
-      }`}
+     */ }`}
     >
       <div className="container mx-auto flex items-center justify-between h-[68px] px-4 lg:px-8">
 
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className={`w-9 h-9 rounded-xl flex items-center justify-center shadow-lg transition-all ${
+          <div className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg bg-gradient-to-br from-[#1e3a8a] to-[#7c3aed]"
+          /*{`w-9 h-9 rounded-xl flex items-center justify-center shadow-lg transition-all ${
             isLight ? "bg-[#f97316]" : "bg-[#7c3aed]"
-          }`}>
+          }`}*/>
             <span className="text-white font-bold text-base leading-none">P</span>
           </div>
-          <span className={`font-bold text-[17px] tracking-tight transition-colors duration-300 ${
+          <span className="font-bold text-[18px] tracking-tight text-white"
+          /*{`font-bold text-[17px] tracking-tight transition-colors duration-300 ${
             isLight ? "text-white" : "text-white drop-shadow-md"
-          }`}>
-            PuneDriver
+          }`}*/>
+            PuneDriver  
           </span>
         </a>
 
@@ -347,7 +352,7 @@ const Navbar = () => {
           <a
             href="tel:+919876543210"
             className={`flex items-center gap-2 text-[13px] font-semibold transition-colors duration-300 ${
-              isLight ? "text-[#d1d5db] hover:text-[#7c3aed]" : "text-white drop-shadow-md"
+              isLight ? "text-[#d1d5db] hover:text-[#f97316]" : "text-white drop-shadow-md"
             }`}
           >
             <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${
@@ -361,7 +366,8 @@ const Navbar = () => {
           <Button
             variant="accent"
             size="sm"
-            className="shadow-cta-glow px-5 rounded-xl text-[13px] font-bold h-9 bg-[#f97316] hover:bg-[#ea580c]"
+            className="px-5 rounded-xl text-[13px] font-bold h-9 bg-gradient-to-r from-[#f97316] to-[#fb923c] hover:from-[#ea580c] hover:to-[#f97316] text-white shadow-lg"
+            /*"shadow-cta-glow px-5 rounded-xl text-[13px] font-bold h-9 bg-[#f97316] hover:bg-[#ea580c]"*/
             asChild
           >
             <a href="#booking">Book a Driver</a>
@@ -445,11 +451,11 @@ const Navbar = () => {
 
                 <Button
                   variant="accent"
-                  className="mt-2 shadow-cta-glow rounded-xl font-bold text-[14px] h-11"
+                  className="mt-2 bg-gradient-to-r from-[#f97316] to-[#fb923c] text-white rounded-xl font-bold text-[14px] h-11"
                   asChild
                 >
                   <a href="#booking" onClick={() => setMobileOpen(false)}>
-                    Book a Driver
+                    Book
                   </a>
                 </Button>
               </nav>

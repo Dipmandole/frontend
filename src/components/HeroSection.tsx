@@ -308,23 +308,23 @@ const GOOGLE_MAPS_LIBRARIES: ("places")[] = ["places"];
 
 const stats = [
   { value: "10,000+", label: "Happy Customers" },
-  { value: "500+",    label: "Verified Drivers"  },
-  { value: "50+",     label: "Cities Covered"    },
-  { value: "4.8★",   label: "Average Rating"     },
+  { value: "500+", label: "Verified Drivers" },
+  { value: "50+", label: "Cities Covered" },
+  { value: "4.8★", label: "Average Rating" },
 ];
 
 const INITIAL_FORM = {
-  full_name:     "",
-  email:         "",
-  phone:         "",
-  pickup_city:   "",   // matches backend field
+  full_name: "",
+  email: "",
+  phone: "",
+  pickup_city: "",   // matches backend field
   drop_location: "",   // matches backend field
-  pickup_date:   format(new Date(), "yyyy-MM-dd"),
-  pickup_time:   "",
-  service_type:  "",
-  vehicle_type:  "",
+  pickup_date: format(new Date(), "yyyy-MM-dd"),
+  pickup_time: "",
+  service_type: "",
+  vehicle_type: "",
   special_notes: "",
-  promo_code:    "",
+  promo_code: "",
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -347,10 +347,10 @@ const TimePicker = ({ value, onChange }: TimePickerProps) => {
   };
 
   const { h: ih, m: im, ap: ia } = parse(value);
-  const [hour,   setHour]   = useState(ih);
+  const [hour, setHour] = useState(ih);
   const [minute, setMinute] = useState(im);
-  const [ampm,   setAmpm]   = useState<"AM" | "PM">(ia);
-  const [open,   setOpen]   = useState(false);
+  const [ampm, setAmpm] = useState<"AM" | "PM">(ia);
+  const [open, setOpen] = useState(false);
 
   const emit = (h: string, m: string, ap: "AM" | "PM") => {
     let h24 = parseInt(h, 10);
@@ -359,12 +359,12 @@ const TimePicker = ({ value, onChange }: TimePickerProps) => {
     onChange(`${String(h24).padStart(2, "0")}:${m}`);
   };
 
-  const onH = (v: string) => { setHour(v);   emit(v, minute, ampm); };
+  const onH = (v: string) => { setHour(v); emit(v, minute, ampm); };
   const onM = (v: string) => { setMinute(v); emit(hour, v, ampm); };
   const onA = (v: "AM" | "PM") => { setAmpm(v); emit(hour, minute, v); };
 
   const display = value
-    ? (() => { const { h, m, ap } = parse(value); return `${h.padStart(2,"0")}:${m} ${ap}`; })()
+    ? (() => { const { h, m, ap } = parse(value); return `${h.padStart(2, "0")}:${m} ${ap}`; })()
     : "Select time";
 
   return (
@@ -429,7 +429,7 @@ const TimePicker = ({ value, onChange }: TimePickerProps) => {
           <div>
             <p className="text-[#d1d5db]/40 text-[10px] font-bold uppercase tracking-widest mb-2">Minute</p>
             <div className="grid grid-cols-6 gap-1.5">
-              {["00","05","10","15","20","25","30","35","40","45","50","55"].map((m) => (
+              {["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"].map((m) => (
                 <button
                   key={m}
                   type="button"
@@ -499,7 +499,7 @@ interface LocationInputProps {
 }
 
 const LocationInput = ({ value, onChange, placeholder, isLoaded, className }: LocationInputProps) => {
-  const acRef  = useRef<google.maps.places.Autocomplete | null>(null);
+  const acRef = useRef<google.maps.places.Autocomplete | null>(null);
   const inpRef = useRef<HTMLInputElement>(null);
 
   // Reset input text when form is cleared
@@ -510,7 +510,7 @@ const LocationInput = ({ value, onChange, placeholder, isLoaded, className }: Lo
   const onPlaceChanged = () => {
     if (!acRef.current) return;
     const place = acRef.current.getPlace();
-    const addr  = place.formatted_address || place.name || inpRef.current?.value || "";
+    const addr = place.formatted_address || place.name || inpRef.current?.value || "";
     onChange(addr);
     // Sync visible input text with resolved address
     if (inpRef.current) inpRef.current.value = addr;
@@ -561,11 +561,11 @@ const LocationInput = ({ value, onChange, placeholder, isLoaded, className }: Lo
 //  HeroSection
 // ─────────────────────────────────────────────────────────────────────────────
 const HeroSection = () => {
-  const [form,      setForm]      = useState(INITIAL_FORM);
-  const [loading,   setLoading]   = useState(false);
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [bookingId, setBookingId] = useState("");
-  const [error,     setError]     = useState("");
+  const [error, setError] = useState("");
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "",
@@ -581,7 +581,7 @@ const HeroSection = () => {
   const handleSubmit = async () => {
     setError("");
     const required = ["full_name", "email", "phone", "pickup_city", "pickup_date", "pickup_time", "service_type", "vehicle_type"];
-    const missing  = required.filter((k) => !form[k as keyof typeof form]);
+    const missing = required.filter((k) => !form[k as keyof typeof form]);
     if (missing.length) { setError("Please fill in all required fields."); return; }
 
     setLoading(true);
@@ -599,18 +599,17 @@ const HeroSection = () => {
   const inputCls = "h-11 rounded-xl text-sm bg-[#111827] border-[#1f2937] text-white placeholder:text-[#d1d5db] focus-visible:ring-1 focus-visible:ring-[#7c3aed] focus-visible:border-[#7c3aed]/60";
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" id="home">
+    <section className="relative min-h-[720px] md:min-h-screen flex items-center overflow-hidden" id="home">
 
       {/* ── BACKGROUND ── */}
       <div className="absolute inset-0">
 
         {/* Desktop: hero photo */}
         <img
-  src={heroImage}
-  alt="Professional driver with car in Pune"
-  className="hidden md:block w-full h-full object-cover object-center brightness-110 contrast-110 saturate-110"
-
-  loading="eager"
+          src={heroImage}
+          alt="Professional driver with car in Pune"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-95 contrast-110"
+          loading="eager"
         />
 
         {/* Mobile: clean dark bg, no image */}
@@ -621,8 +620,9 @@ const HeroSection = () => {
           className="hidden md:block absolute inset-0"
           style={{
             background:
-                "linear-gradient(105deg, rgba(11,31,58,0.30) 0%, rgba(11,31,58,0.15) 40%, rgba(11,31,58,0.05) 70%, rgba(11,31,58,0.01) 100%)",
-                
+              /*"linear-gradient(105deg, rgba(11,31,58,0.30) 0%, rgba(11,31,58,0.15) 40%, rgba(11,31,58,0.05) 70%, rgba(11,31,58,0.01) 100%)"*/
+              "linear-gradient(90deg, rgba(11,31,58,0.55) 0%, rgba(11,31,58,0.35) 40%, rgba(11,31,58,0.15) 70%, rgba(11,31,58,0.05) 100%)",
+
           }}
         />
         {/* Bottom vignette */}
@@ -667,11 +667,20 @@ const HeroSection = () => {
             transition={{ duration: 0.75, delay: 0.25 }}
             id="booking" className="order-2 lg:order-last"
           >
-            <div className="rounded-3xl p-6 md:p-8
+            <div className="max-w-lg
+              w-full
+              mx-auto
+             rounded-3xl
+                  p-7 md:p-9
+                bg-[#0b1f3a]/60
+                  backdrop-blur-xl
+                  border border-white/20
+                  shadow-[0_25px_80px_rgba(0,0,0,0.5)]"
+            /*"rounded-3xl p-6 md:p-8
                 bg-black/30
                 backdrop-blur-md
                 border border-white/15
-                shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+                shadow-[0_20px_50px_rgba(0,0,0,0.4)]"*/>
 
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -880,17 +889,20 @@ const HeroSection = () => {
             <h1 className="hidden lg:block font-display text-4xl md:text-5xl lg:text-[3.4rem]
                            font-extrabold text-white drop-shadow-lg leading-[1.1] mb-8 tracking-tight">
               Hire a Professional Driver —{" "}
-              <span className="gradient-text-accent drop-shadow-md">Fast, Safe &amp; Reliable</span>
+              <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Fast, Safe &amp; Reliable</span>
             </h1>
 
             <ul className="space-y-3 text-white/90 text-[0.95rem] md:text-lg mb-8">
-              {["24/7 Service Availability","Verified & Trained Drivers","Hourly, Daily & Monthly Options","Pune, Mumbai & Outstation Routes"].map((item, i) => (
+              {["24/7 Easy Driver Booking",
+"Background Verified Drivers",
+"Flexible Booking Plans",
+"Serving Pune, Mumbai & Nearby Cities"].map((item, i) => (
                 <motion.li key={item}
                   initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + i * 0.1 }}
                   className="flex items-center gap-3 font-medium"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-orange-400" />
                   {item}
                 </motion.li>
               ))}
@@ -900,7 +912,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
               className="flex flex-wrap gap-3 mb-10"
             >
-              <Button variant="accent" size="lg" className="shadow-cta-glow text-base px-8" asChild>
+              <Button variant="accent" size="lg" className="bg-gradient-to-r
+from-orange-500
+to-orange-400
+hover:from-orange-600
+hover:to-orange-500
+text-white
+shadow-lg" asChild>
                 <a href="tel:+919876543210">📞 Call Now</a>
               </Button>
               <Button variant="heroOutline" size="lg" className="text-base px-8" asChild>
@@ -912,9 +930,19 @@ const HeroSection = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-[#1f2937]
+              className="
+grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6
+bg-gradient-to-r
+from-[#0f172a]
+via-[#1e3a8a]
+to-[#7c3aed]
+p-6
+rounded-2xl
+shadow-xl
+"
+              /*"grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-[#1f2937]
                          bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none
-                         px-5 md:px-0 py-5 md:py-0 rounded-2xl md:rounded-none -mx-1 md:mx-0"
+                         px-5 md:px-0 py-5 md:py-0 rounded-2xl md:rounded-none -mx-1 md:mx-0"*/
             >
               {stats.map((s) => (
                 <div key={s.label}>
@@ -930,13 +958,13 @@ const HeroSection = () => {
 
       {/* Bottom wave */}
       <div className="absolute -bottom-[1px] left-0 right-0 pointer-events-none ">
-  <svg viewBox="0 0 1440 120" className="w-full">
-    <path
-      d="M0,64L80,74.7C160,85,320,107,480,106.7C640,107,800,85,960,74.7C1120,64,1280,64,1360,64L1440,64L1440,120L0,120Z"
-      fill="#eef0f1" stroke="none"
-    />
-  </svg>
-</div>
+        <svg viewBox="0 0 1440 120" className="w-full">
+          <path
+            d="M0,64L80,74.7C160,85,320,107,480,106.7C640,107,800,85,960,74.7C1120,64,1280,64,1360,64L1440,64L1440,120L0,120Z"
+            fill="#eef0f1" stroke="none"
+          />
+        </svg>
+      </div>
     </section>
   );
 };
