@@ -2,9 +2,27 @@ import { Star, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 
 const testimonials = [
-  { name: "Rajesh Sharma", role: "Business Owner", text: "Excellent service! The driver was punctual, professional, and knew the routes very well. Highly recommended for outstation trips.", rating: 5, initials: "RS" },
-  { name: "Priya Kulkarni", role: "IT Professional", text: "I use their monthly driver service for my daily commute. Reliable and affordable — saves me so much stress every day.", rating: 5, initials: "PK" },
-  { name: "Amit Deshmukh", role: "Event Manager", text: "Booked their valet service for a wedding. Flawless execution, polite staff, and they handled 50+ cars without a hitch!", rating: 5, initials: "AD" },
+   {
+    name: "Rahul Patil",
+    role: "Corporate Professional",
+    text: "Booked a driver for an outstation trip and the experience was smooth from start to finish. Very professional and punctual service.",
+    rating: 5,
+    initials: "RP",
+  },
+  {
+    name: "Sneha Joshi",
+    role: "Working Professional",
+    text: "Using their daily driver service has made my routine stress-free. Reliable drivers and always on time — highly recommended.",
+    rating: 5,
+    initials: "SJ",
+  },
+  {
+    name: "Vikram Mehta",
+    role: "Business Owner",
+    text: "Excellent valet service for our corporate event. Well-managed, polite staff, and everything was handled perfectly.",
+    rating: 5,
+    initials: "VM",
+  },
 ];
 
 const Testimonials = () => (
@@ -18,7 +36,9 @@ const Testimonials = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+        <span className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-violet-600/20 
+ border border-violet-500/30 
+text-violet-500   text-accent-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
           ⭐ Testimonials
         </span>
         <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mt-3 tracking-tight">
@@ -34,12 +54,12 @@ const Testimonials = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.5 }}
-            className="bg-card rounded-2xl p-7 border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 relative"
+            className=" bg-card rounded-2xl p-7 border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 relative"
           >
             <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/8" />
             <div className="flex gap-0.5 mb-5">
               {Array.from({ length: t.rating }).map((_, j) => (
-                <Star key={j} className="w-5 h-5 fill-accent text-accent" />
+                <Star key={j} className="w-5 h-5 fill-violet-400 text-violet-400" />
               ))}
             </div>
             <p className="text-foreground text-sm mb-6 leading-relaxed italic">"{t.text}"</p>

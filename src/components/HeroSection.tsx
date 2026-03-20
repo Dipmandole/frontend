@@ -473,9 +473,11 @@ const TimePicker = ({ value, onChange }: TimePickerProps) => {
           <button
             type="button"
             onClick={() => setOpen(false)}
-            className="w-full h-10 rounded-xl bg-[#f97316]/20 border border-[#f97316]/30
-                       text-[#f97316] text-sm font-bold hover:bg-[#f97316] hover:text-white
-                       transition-all duration-150"
+            className="w-full h-10 rounded-xl 
+bg-blue-500/10 border border-blue-400/20 
+text-blue-400 text-sm font-bold 
+hover:bg-blue-500 hover:text-white
+transition-all duration-150"
           >
             Confirm ✓
           </button>
@@ -613,7 +615,7 @@ const HeroSection = () => {
         />
 
         {/* Mobile: clean dark bg, no image */}
-        <div className="md:hidden absolute inset-0 bg-[#0b1f3a]" />
+        <div className="md:hidden absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617]" />
 
         {/* Desktop overlay — strong on left so text reads, gentle on right so photo shows */}
         <div
@@ -645,19 +647,14 @@ const HeroSection = () => {
 
           {/* Mobile: badge + headline */}
           <div className="order-1 lg:hidden mb-5">
-            <motion.span
-              initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-4 py-1.5 rounded-full text-xs font-semibold mb-3"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
-              #1 Driver Hire Service · Pune &amp; Mumbai
-            </motion.span>
+            
             <motion.h1
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}
               className="font-display text-[1.65rem] font-extrabold text-white leading-[1.2] tracking-tight"
             >
               Hire a Professional Driver —{" "}
-              <span className="text-accent">Fast, Safe &amp; Reliable</span>
+              
+              
             </motion.h1>
           </div>
 
@@ -672,9 +669,7 @@ const HeroSection = () => {
               mx-auto
              rounded-3xl
                   p-7 md:p-9
-                bg-[#0b1f3a]/60
-                  backdrop-blur-xl
-                  border border-white/20
+                bg-[#0f172a]/80 backdrop-blur-xl border border-white/10
                   shadow-[0_25px_80px_rgba(0,0,0,0.5)]"
             /*"rounded-3xl p-6 md:p-8
                 bg-black/30
@@ -683,7 +678,10 @@ const HeroSection = () => {
                 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"*/>
 
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 shadow-lg">
+                <div className=" w-9 h-9 rounded-xl 
+    bg-gradient-to-br from-blue-600 to-violet-600
+    flex items-center justify-center flex-shrink-0 
+    shadow-[0_6px_20px_rgba(79,70,229,0.4)]">
                   <Car className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -739,7 +737,7 @@ const HeroSection = () => {
                     {/* Location — Google Autocomplete */}
                     <div className="rounded-2xl bg-[#111827] border border-[#1f2937] overflow-visible divide-y divide-[#1f2937]">
                       <div className="flex items-center px-3 gap-2">
-                        <Target className="w-4 h-4 text-accent flex-shrink-0" />
+                        <Target className="w-4 h-4 text-violet-400 flex-shrink-0" />
                         <LocationInput
                           value={form.pickup_city}
                           onChange={(val) => setForm((prev) => ({ ...prev, pickup_city: val }))}
@@ -763,7 +761,7 @@ const HeroSection = () => {
 
                       {/* Date */}
                       <div className="flex items-center gap-2 px-3">
-                        <CalendarIcon className="w-4 h-4 text-accent flex-shrink-0" />
+                        <CalendarIcon className="w-4 h-4 text-violet-400 flex-shrink-0" />
                         <span className="text-[11px] font-semibold text-[#d1d5db] uppercase tracking-wider w-10 flex-shrink-0">
                           Date
                         </span>
@@ -781,7 +779,7 @@ const HeroSection = () => {
                                   ? format(new Date(form.pickup_date + "T00:00:00"), "EEE, MMM d yyyy")
                                   : "Select date"}
                               </span>
-                              <ChevronDown className="w-3.5 h-3.5 text-[#d1d5db] flex-shrink-0" />
+                              <ChevronDown className="w-3.5 h-3.5 text-violet-400 flex-shrink-0" />
                             </button>
                           </PopoverTrigger>
                           <PopoverContent className="w-auto p-0 z-[200]" align="start">
@@ -799,7 +797,7 @@ const HeroSection = () => {
 
                       {/* Time */}
                       <div className="flex items-center gap-2 px-3">
-                        <Clock className="w-4 h-4 text-accent flex-shrink-0" />
+                        <Clock className="w-4 h-4 text-violet-400 flex-shrink-0" />
                         <span className="text-[11px] font-semibold text-[#d1d5db] uppercase tracking-wider w-10 flex-shrink-0">
                           Time
                         </span>
@@ -850,7 +848,13 @@ const HeroSection = () => {
 
                     <Button
                       variant="accent" size="lg"
-                      className="w-full h-12 text-base font-bold shadow-cta-glow rounded-xl mt-1"
+                      className="w-full h-12 text-base font-bold rounded-xl mt-1 
+bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 
+hover:from-blue-700 hover:via-indigo-700 hover:to-violet-700 
+text-white 
+shadow-lg hover:shadow-xl 
+transition-all duration-300 
+active:scale-[0.98]" 
                       onClick={handleSubmit}
                       disabled={loading}
                     >
@@ -878,18 +882,12 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="order-3 lg:order-first mt-8 lg:mt-0"
           >
-            <motion.span
-              initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-              className="hidden lg:inline-flex items-center gap-2 bg-accent/15 border border-accent/25 text-accent px-5 py-2 rounded-full text-sm font-semibold mb-8 backdrop-blur-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              #1 Driver Hire Service in Pune &amp; Mumbai
-            </motion.span>
+            
 
             <h1 className="hidden lg:block font-display text-4xl md:text-5xl lg:text-[3.4rem]
                            font-extrabold text-white drop-shadow-lg leading-[1.1] mb-8 tracking-tight">
-              Hire a Professional Driver —{" "}
-              <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Fast, Safe &amp; Reliable</span>
+              Book Your Personal Driver —{" "}
+             
             </h1>
 
             <ul className="space-y-3 text-white/90 text-[0.95rem] md:text-lg mb-8">
@@ -902,7 +900,7 @@ const HeroSection = () => {
                   transition={{ delay: 0.5 + i * 0.1 }}
                   className="flex items-center gap-3 font-medium"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-orange-400" />
+                  <CheckCircle2 className="w-5 h-5 text-violet-400" />
                   {item}
                 </motion.li>
               ))}
@@ -913,8 +911,8 @@ const HeroSection = () => {
               className="flex flex-wrap gap-3 mb-10"
             >
               <Button variant="accent" size="lg" className="bg-gradient-to-r
-from-orange-500
-to-orange-400
+from-blue-400
+to-violet-600
 hover:from-orange-600
 hover:to-orange-500
 text-white

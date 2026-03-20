@@ -76,12 +76,12 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const services = [
-  { title: "Hourly Driver", desc: "Hire a driver by the hour for errands, meetings, or short trips around the city.", gradient: "from-primary to-secondary" },
-  { title: "Daily / Monthly Driver", desc: "Full-day or long-term driver hire for regular commuting and personal needs.", gradient: "from-secondary to-primary" },
-  { title: "Outstation Driver", desc: "Professional drivers for intercity travel — Pune to Mumbai, Goa, Shirdi & more.", gradient: "from-primary to-accent" },
-  { title: "Temporary Driver", desc: "Short-term replacement driver when your regular driver is on leave.", gradient: "from-accent to-primary" },
-  { title: "Valet & Event", desc: "Professional valet parking and chauffeur services for weddings and corporate events.", gradient: "from-secondary to-accent" },
-  { title: "Driving Instructor", desc: "Learn to drive with certified instructors in your own car or ours.", gradient: "from-accent to-secondary" },
+  { title: "Hourly Driver Service", desc: "Hire a professional driver for short trips, meetings, shopping, or city travel — pay only for the time you use.", gradient: "from-primary to-secondary" },
+  { title: "Daily / Monthly Driver", desc: "Dedicated drivers for your daily commute, office travel, or personal use with flexible long-term plans.", gradient: "from-secondary to-primary" },
+  { title: "Outstation Driver", desc: "Comfortable and safe long-distance journeys with experienced drivers for trips across cities and states.", gradient: "from-primary to-accent" },
+  { title: "Temporary Driver", desc: "Instant replacement drivers when your regular driver is unavailable — no interruptions to your routine.", gradient: "from-accent to-primary" },
+  { title: "Valet & Event", desc: "Professional valet and chauffeur services for weddings, parties, and corporate events with smooth coordination.", gradient: "from-secondary to-accent" },
+  { title: "Driving Training Service", desc: "Learn driving confidently with certified instructors — available for beginners and advanced learners.", gradient: "from-accent to-secondary" },
 ];
 
 const Services = () => (
@@ -104,7 +104,7 @@ const Services = () => (
           Driver Solutions for <span className="text-[#7c3aed]">Every Need</span>
         </h2>
         <p className="text-muted-foreground text-gray-500 text-lg mt-4 max-w-2xl mx-auto">
-          From hourly rides to long-term hires — we have the perfect driver solution for you
+            Flexible and reliable driver services designed for your daily travel, business needs, and long-distance journeys.
         </p>
       </motion.div>
 

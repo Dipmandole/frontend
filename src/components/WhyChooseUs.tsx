@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import servicesBg from "@/assets/services-bg.jpg";
 
 const features = [
-  { icon: ShieldCheck, title: "Verified Drivers", desc: "Background-checked & trained professionals", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
-  { icon: Clock, title: "24/7 Availability", desc: "Book anytime, day or night", color: "from-[#9333ea]/15 to-[#7c3aed]/10" },
-  { icon: UserCheck, title: "Experienced Pros", desc: "5+ years average driving experience", color: "from-[#7c3aed]/15 to-[#7c3aed]/5" },
-  { icon: Zap, title: "Instant Booking", desc: "Get a driver in under 30 minutes", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
-  { icon: Star, title: "Top Rated", desc: "4.8★ average customer rating", color: "from-[#9333ea]/15 to-[#7c3aed]/10" },
-  { icon: Headphones, title: "Dedicated Support", desc: "Helpline available round the clock", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
+  { icon: ShieldCheck, title: "Safety Comes First", desc: "Every driver is carefully verified and trained to ensure a secure and worry-free journey.", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
+  { icon: Clock, title: "24/7 Availability", desc: "Our services are available 24/7, so you can book a driver anytime you need.", color: "from-[#9333ea]/15 to-[#7c3aed]/10" },
+  { icon: UserCheck, title: "Experienced Pros", desc: "Skilled and experienced drivers who prioritize comfort and smooth driving.", color: "from-[#7c3aed]/15 to-[#7c3aed]/5" },
+  { icon: Zap, title: "Fast & Easy Booking", desc: "Book your driver in seconds with a quick and hassle-free process.", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
+  { icon: Star, title: "Top Rated", desc: "Loved by customers for reliability, professionalism, and excellent experience.", color: "from-[#9333ea]/15 to-[#7c3aed]/10" },
+  { icon: Headphones, title: "Dedicated Support", desc: "Our team is always ready to assist you whenever you need help.", color: "from-[#7c3aed]/15 to-[#9333ea]/10" },
 ];
 
 const WhyChooseUs = () => (
@@ -33,7 +33,7 @@ const WhyChooseUs = () => (
           Trusted by <span className="text-[#53299d]">10,000+</span> Happy Customers
         </h2>
         <p className="text-muted-foreground text-gray-500 text-lg mt-4 max-w-2xl mx-auto">
-          We provide the most reliable and professional driver services across Pune & Mumbai
+          Experience professional driver services designed for comfort, safety, and convenience — trusted by thousands across Pune and Mumbai.
         </p>
       </motion.div>
 

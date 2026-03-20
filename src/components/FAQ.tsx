@@ -7,11 +7,26 @@ import {
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "How quickly can I get a driver?", a: "We can arrange a driver within 30 minutes for locations within Pune city limits. For outstation bookings, we recommend booking at least 2 hours in advance." },
-  { q: "Are your drivers verified and trained?", a: "Yes, all our drivers undergo thorough background verification, driving skill tests, and are trained in road safety and customer etiquette before onboarding." },
-  { q: "What cities do you operate in?", a: "We primarily serve Pune and Mumbai, including all suburbs. For outstation trips, we cover routes across Maharashtra and neighboring states." },
-  { q: "Can I hire a driver for my own car?", a: "Absolutely! Our core service is providing professional drivers who drive your car. We're experienced with all vehicle types — hatchbacks, sedans, SUVs, and luxury cars." },
-  { q: "What are your payment options?", a: "We accept cash, UPI, bank transfers, and all major digital wallets. Monthly customers can opt for invoice-based billing." },
+  {
+    q: "How fast can I book a driver?",
+    a: "You can get a professional driver within 30–45 minutes in Pune city. For outstation rides, we recommend booking at least 1–2 hours in advance for better availability.",
+  },
+  {
+    q: "Are your drivers verified?",
+    a: "Yes, all drivers are background-verified, trained, and experienced. We ensure safety, professionalism, and proper driving skills before onboarding.",
+  },
+  {
+    q: "Do you provide drivers for personal cars?",
+    a: "Yes, we specialize in providing skilled drivers who can drive your personal car safely for daily use, office travel, or long trips.",
+  },
+  {
+    q: "Which locations do you cover?",
+    a: "We serve Pune, Mumbai, and nearby cities. We also provide outstation drivers across Maharashtra and nearby states.",
+  },
+  {
+    q: "What payment methods are available?",
+    a: "We accept UPI, cash, bank transfer, and digital wallets. Monthly plans also support invoice-based billing.",
+  },
 ];
 
 const FAQ = () => (
@@ -25,11 +40,16 @@ const FAQ = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+        <span className="inline-flex items-center gap-2 
+bg-blue-500/10 border border-blue-400/20 
+text-blue-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
           FAQ
         </span>
-        <h2 className="font-display text-3xl md:text-5xl font-extrabold text-foreground mt-3 tracking-tight">
-          Frequently Asked Questions
+        <h2 className="font-display text-3xl md:text-5xl font-extrabold text-gray-900 mt-3 tracking-tight">
+  Frequently Asked{" "}
+  <span className="bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
+    Questions
+  </span>
         </h2>
       </motion.div>
 
@@ -42,11 +62,18 @@ const FAQ = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
           >
-            <AccordionItem value={`faq-${i}`} className="bg-card border border-border/50 rounded-2xl px-7 shadow-card hover:shadow-card-hover transition-shadow">
-              <AccordionTrigger className="font-display font-semibold text-foreground text-left hover:no-underline py-5">
+            <AccordionItem value={`faq-${i}`} className="bg-white 
+rounded-2xl px-7 
+border border-gray-200 
+hover:border-violet-400/40
+shadow-sm 
+hover:shadow-xl 
+transition-all duration-300
+ ">
+              <AccordionTrigger className="font-display font-semibold text-gray-900 text-left hover:no-underline py-5">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+              <AccordionContent className="text-gray-600 leading-relaxed pb-5">
                 {f.a}
               </AccordionContent>
             </AccordionItem>

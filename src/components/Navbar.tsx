@@ -352,7 +352,7 @@ const Navbar = () => {
           <a
             href="tel:+919876543210"
             className={`flex items-center gap-2 text-[13px] font-semibold transition-colors duration-300 ${
-              isLight ? "text-[#d1d5db] hover:text-[#f97316]" : "text-white drop-shadow-md"
+              isLight ? "text-[#d1d5db] hover:text-[#c23fe0]" : "text-white drop-shadow-md"
             }`}
           >
             <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${
@@ -366,7 +366,7 @@ const Navbar = () => {
           <Button
             variant="accent"
             size="sm"
-            className="px-5 rounded-xl text-[13px] font-bold h-9 bg-gradient-to-r from-[#f97316] to-[#fb923c] hover:from-[#ea580c] hover:to-[#f97316] text-white shadow-lg"
+            className="px-5 rounded-xl text-[13px] font-bold h-9 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-700 hover:via-indigo-700 hover:to-violet-700 text-white shadow-lg"
             /*"shadow-cta-glow px-5 rounded-xl text-[13px] font-bold h-9 bg-[#f97316] hover:bg-[#ea580c]"*/
             asChild
           >
@@ -451,7 +451,7 @@ const Navbar = () => {
 
                 <Button
                   variant="accent"
-                  className="mt-2 bg-gradient-to-r from-[#f97316] to-[#fb923c] text-white rounded-xl font-bold text-[14px] h-11"
+                  className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white rounded-xl font-bold text-[14px] h-11"
                   asChild
                 >
                   <a href="#booking" onClick={() => setMobileOpen(false)}>

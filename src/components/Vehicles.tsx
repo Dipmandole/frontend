@@ -85,28 +85,29 @@ import sectionBgDark from "@/assets/section-bg-dark.jpg";
 
 const vehicles = [
   {
-    type: "Hatchback",
-    examples: "WagonR · i10 · Swift",
-    desc: "Perfect for city commutes and short trips around Pune & Mumbai",
-    tag: "Most Popular",
-    tagColor: "bg-orange-500",
-    features: ["Fuel Efficient", "Easy Parking", "City Expert"],
+    type: "Fastback",
+    examples: "WagonR · Ford · Swift",
+    desc: "Ideal for everyday rides, quick pickups, and hassle-free city travel",
+    tag: "Top Choice",
+    tagColor: "bg-blue-500",
+    features: ["Low Cost", "Compact Size", "Urban Ready"],
   },
   {
     type: "Sedan",
     examples: "Honda City · Ciaz · Verna",
-    desc: "Comfortable rides for business meetings & family outings",
-    tag: "Business Choice",
-    tagColor: "bg-blue-500",
-    features: ["AC Comfort", "Boot Space", "Professional"],
+    desc: "Designed for relaxed journeys, business trips, and premium comfort travel",
+    tag: "Best Comfort",
+    tagColor: "bg-indigo-500",
+    features: ["Comfort Ride", "Wide Seats", "Executive"],
   },
   {
     type: "SUV / MUV",
     examples: "Innova · XUV700 · Fortuner",
-    desc: "Spacious vehicles for groups, outstation trips & airport runs",
-    tag: "Premium",
-    tagColor: "bg-purple-500",
-    features: ["7 Seater", "Outstation Ready", "Luggage Space"],
+    desc: "Suitable for family trips, highway drives, and spacious travel needs",
+    tag: "Luxury Pick",
+    tagColor: "bg-violet-500",
+    features: ["Large Space", "High Power", "Travel Ready"],
+    
   },
 ];
 
@@ -144,12 +145,12 @@ const Vehicles = () => (
         <span className="inline-flex items-center gap-2 bg-[#d2bef4]/15 border border-[#7c3aed]/25 text-[#7b48d2] px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
           <Car className="w-3.5 h-3.5" /> Vehicles We Cover
         </span>
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary-foreground mt-3 tracking-tight text-black leading-tight">
-          We Drive{" "}
-          <span className="text-[#7c3aed]">All Vehicle Types</span>
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#11117edd] mt-3 tracking-tight text-black leading-tight">
+          Drive With{" "}
+          <span className="text-[#7c3aed]">Every Vehicle Type</span>
         </h2>
-        <p className="text-primary-foreground/60 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed px-4 text-gray-500">
-          Whether it's a compact hatchback or a luxury SUV — our trained drivers handle them all
+        <p className="text-primary-foreground/60 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed px-4 text-[#566163ee]">
+        From daily city rides to premium long trips — our expert drivers handle every vehicle with care
         </p>
       </motion.div>
 
@@ -165,12 +166,13 @@ const Vehicles = () => (
             className="group relative"
           >
             {/* Card */}
-            <div className="relative h-full rounded-2xl border border-[#1f2937] bg-[#111827]/80 backdrop-blur-sm
-                            hover:bg-[#111827]/90 hover:border-[#7c3aed]/20 hover:shadow-2xl
+            <div className="relative h-full rounded-2xl bg-gradient-to-br from-[#0f172a]/90 to-[#1e293b]/80 
+border border-[#334155] backdrop-blur-sm
+                            hover:bg-[#3e4b68]/90 hover:border-[#7c3aed]/20 hover:shadow-2xl
                             transition-all duration-300 overflow-hidden p-6 md:p-7 flex flex-col">
 
               {/* Tag badge */}
-              <span className={`absolute top-4 right-4 ${v.tagColor === 'bg-orange-500' ? 'bg-[#dca931]' : v.tagColor === 'bg-blue-500' ? 'bg-[#64abf2]' : 'bg-[#9333ea]'} text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide uppercase`}>
+              <span className={`absolute top-4 right-4 ${v.tagColor === 'bg-violet-500' ? 'bg-[#972dbeee]' : v.tagColor === 'bg-blue-500' ? 'bg-[#64abf2]' : 'bg-[#9333ea]'} text-white text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide uppercase`}>
                 {v.tag}
               </span>
 
@@ -187,7 +189,7 @@ const Vehicles = () => (
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {v.features.map((f) => (
                   <span key={f} className="text-[11px] font-semibold text-primary-foreground/60
-                                           bg-[#111827] border border-[#1f2937] px-2.5 py-1 rounded-lg">
+                                           bg-[#0f172a] border border-[#334155] text-slate-300 px-2.5 py-1 rounded-lg">
                     {f}
                   </span>
                 ))}
@@ -196,7 +198,8 @@ const Vehicles = () => (
               {/* CTA */}
               <div className="flex items-center justify-end mt-auto pt-4 border-t border-white/10">
                 <a href="#booking"
-                  className="flex items-center gap-1.5 bg-[#f97316] hover:bg-[#ea580c]
+                  className="flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-violet-600
+hover:from-blue-700 hover:to-violet-700
                              text-white
                              text-xs font-bold px-4 py-2.5 rounded-xl transition-all duration-200
                              shadow-lg hover:shadow-[#f97316]/30 hover:-translate-y-0.5">
@@ -217,8 +220,8 @@ const Vehicles = () => (
         className="flex flex-wrap justify-center gap-4 md:gap-8 mt-10 md:mt-14"
       >
         {trustBadges.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center gap-2 text-gray-500 text-primary-foreground/50 text-sm font-medium">
-            <Icon className="w-4 h-4 text-[#7450b4]" />
+          <div key={label} className="flex items-center gap-2 text-gray-600  text-sm font-medium">
+            <Icon className="w-4 h-4 text-[#7046ba]" />
             {label}
           </div>
         ))}
@@ -232,7 +235,7 @@ const Vehicles = () => (
         transition={{ delay: 0.5 }}
         className="text-center mt-8 md:mt-10"
       >
-        <Button variant="heroOutline" size="lg" className="text-sm md:text-base text-black px-6 md:px-8" asChild>
+        <Button variant="heroOutline" size="lg" className="border border-violet-500 text-sm md:text-base text-black px-6 md:px-8" asChild>
           <a href="#booking">
             Book Your Driver Now <ChevronRight className="w-4 h-4 ml-1" />
           </a>
